@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .card {
+            background-color: #1a1a1a;
+            color: #020439;
+            border: 2px solid #e97210;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 10px;
+            width: 32vw;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, rgba(3, 0, 1, 0.5), rgba(235, 156, 83, 0.5));
+            border-radius: 15px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.6;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px 0 0 20px rgba(0, 255, 0, 0.9);
+            ;
+        }
+        
+        h1,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-size: 2em;
+            color: #2b020b;
+            text-shadow: 0 0 10px rgba(220, 196, 59, 0.7);
+        }
+        
+        h6 {
+            font-size: 1.2em;
+            color: #2b020b;
+            text-shadow: 0 0 8px rgba(220, 196, 59, 0.7);
+        }
+        
+        p {
+            font-weight: bold;
+            color: #2b020b;
+            text-shadow: 0 0 8px rgba(220, 196, 59, 0.7);
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Rachelle</h1>
+            <br/><br/>
+            <p>BEAUDRY</p>
+            <br/> <br/>
+            <h6>P H O T O G R A P H Y</h6>
+        </div>
+    </div>
+</body>
+
+</html>
